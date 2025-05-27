@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Check, MessageCircle, Users, Calendar, Bell, TrendingUp, Calculator, Heart, Phone } from "lucide-react"
+import Inmobot from "@/components/ui/inmobot"
 
 export default function InmobotLanding() {
   return (
@@ -438,6 +439,32 @@ export default function InmobotLanding() {
                 </div>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Property Appraiser Section */}
+      <section className="py-16 bg-gradient-to-b from-white to-slate-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Probá el Tasador Inteligente</h2>
+              <p className="text-lg text-slate-600">
+                Obtén una estimación precisa del valor de tu propiedad en segundos
+              </p>
+            </div>
+
+            <Card className="shadow-lg">
+              <CardContent className="p-6">
+                <Inmobot />
+              </CardContent>
+            </Card>
+
+            <div className="mt-8 text-center">
+              <p className="text-sm text-slate-500">
+                * Esta es una estimación basada en datos del mercado. Para una tasación profesional, contacta con uno de nuestros asesores.
+              </p>
+            </div>
           </div>
         </div>
       </section>
