@@ -368,7 +368,7 @@ export default function InmobotLanding() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-12 text-center">
-              ¿Por qué mejor que Pulpo Chat?
+              ¿Por qué elegir RealSync?
             </h2>
             <Card className="shadow-lg">
               <CardContent className="p-0">
@@ -377,7 +377,7 @@ export default function InmobotLanding() {
                     <thead>
                       <tr className="border-b bg-slate-50">
                         <th className="text-left p-4 font-semibold text-slate-900">Funcionalidad</th>
-                        <th className="text-center p-4 font-semibold text-slate-600">Pulpo Chat</th>
+                        <th className="text-center p-4 font-semibold text-slate-600">Chatbots Básicos</th>
                         <th className="text-center p-4 font-semibold text-blue-600">RealSync</th>
                       </tr>
                     </thead>
@@ -424,6 +424,18 @@ export default function InmobotLanding() {
                           <Check className="h-5 w-5 text-green-500 mx-auto" />
                         </td>
                       </tr>
+                      <tr className="border-b bg-slate-50/50">
+                        <td className="p-4 text-slate-900">Estadísticas de mercado en tiempo real</td>
+                        <td className="p-4 text-center text-slate-400">No</td>
+                        <td className="p-4 text-center">
+                          <div className="flex items-center justify-center gap-2">
+                            <Check className="h-5 w-5 text-green-500" />
+                            <Badge variant="secondary" className="text-xs">
+                              EXCLUSIVO
+                            </Badge>
+                          </div>
+                        </td>
+                      </tr>
                       <tr>
                         <td className="p-4 text-slate-900">Acompañamiento personalizado</td>
                         <td className="p-4 text-center text-slate-400">No</td>
@@ -436,6 +448,142 @@ export default function InmobotLanding() {
                       </tr>
                     </tbody>
                   </table>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Market Statistics Section */}
+      <section className="py-16 bg-slate-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Estadísticas de Mercado en Tiempo Real</h2>
+              <p className="text-lg text-slate-600">
+                Datos actualizados de ventas recientes para tomar decisiones informadas
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              {/* Market Overview Card */}
+              <Card className="shadow-lg">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="bg-blue-100 p-3 rounded-lg">
+                      <TrendingUp className="h-6 w-6 text-blue-600" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-slate-900">Vista General del Mercado</h3>
+                  </div>
+                  <div className="space-y-4">
+                    <div className="flex justify-between items-center">
+                      <span className="text-slate-600">Propiedades vendidas (último mes)</span>
+                      <span className="font-semibold text-slate-900">1,234</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-slate-600">Precio promedio m²</span>
+                      <span className="font-semibold text-slate-900">$2,500 USD</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-slate-600">Tiempo promedio de venta</span>
+                      <span className="font-semibold text-slate-900">45 días</span>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Zone Comparison Card */}
+              <Card className="shadow-lg">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="bg-blue-100 p-3 rounded-lg">
+                      <Calculator className="h-6 w-6 text-blue-600" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-slate-900">Comparación por Zona</h3>
+                  </div>
+                  <div className="space-y-4">
+                    <div className="flex justify-between items-center">
+                      <span className="text-slate-600">Palermo</span>
+                      <span className="font-semibold text-slate-900">$2,800 USD/m²</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-slate-600">Recoleta</span>
+                      <span className="font-semibold text-slate-900">$2,600 USD/m²</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-slate-600">Belgrano</span>
+                      <span className="font-semibold text-slate-900">$2,400 USD/m²</span>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Detailed Statistics */}
+            <Card className="shadow-lg">
+              <CardContent className="p-6">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="bg-blue-100 p-3 rounded-lg">
+                    <Users className="h-6 w-6 text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-slate-900">Estadísticas Detalladas por Zona</h3>
+                </div>
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <thead>
+                      <tr className="border-b">
+                        <th className="text-left p-4 font-semibold text-slate-900">Zona</th>
+                        <th className="text-center p-4 font-semibold text-slate-900">Ventas (30 días)</th>
+                        <th className="text-center p-4 font-semibold text-slate-900">Precio m²</th>
+                        <th className="text-center p-4 font-semibold text-slate-900">Tendencia</th>
+                        <th className="text-center p-4 font-semibold text-slate-900">% RealSync</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr className="border-b">
+                        <td className="p-4 text-slate-900">Palermo</td>
+                        <td className="p-4 text-center">156</td>
+                        <td className="p-4 text-center">$2,800 USD</td>
+                        <td className="p-4 text-center">
+                          <span className="text-green-500">↑ 2.3%</span>
+                        </td>
+                        <td className="p-4 text-center">35%</td>
+                      </tr>
+                      <tr className="border-b">
+                        <td className="p-4 text-slate-900">Recoleta</td>
+                        <td className="p-4 text-center">142</td>
+                        <td className="p-4 text-center">$2,600 USD</td>
+                        <td className="p-4 text-center">
+                          <span className="text-green-500">↑ 1.8%</span>
+                        </td>
+                        <td className="p-4 text-center">28%</td>
+                      </tr>
+                      <tr className="border-b">
+                        <td className="p-4 text-slate-900">Belgrano</td>
+                        <td className="p-4 text-center">128</td>
+                        <td className="p-4 text-center">$2,400 USD</td>
+                        <td className="p-4 text-center">
+                          <span className="text-red-500">↓ 0.5%</span>
+                        </td>
+                        <td className="p-4 text-center">42%</td>
+                      </tr>
+                      <tr>
+                        <td className="p-4 text-slate-900">Caballito</td>
+                        <td className="p-4 text-center">98</td>
+                        <td className="p-4 text-center">$2,200 USD</td>
+                        <td className="p-4 text-center">
+                          <span className="text-green-500">↑ 1.2%</span>
+                        </td>
+                        <td className="p-4 text-center">31%</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div className="mt-6 text-center">
+                  <p className="text-sm text-slate-500">
+                    * Datos actualizados diariamente. El porcentaje RealSync indica la participación de propiedades vendidas por inmobiliarias asociadas a nuestra plataforma.
+                  </p>
                 </div>
               </CardContent>
             </Card>

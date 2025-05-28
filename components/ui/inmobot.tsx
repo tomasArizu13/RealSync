@@ -13,7 +13,7 @@ import { Loader2 } from "lucide-react"
 import { useRouter } from "next/navigation"
 
 // Configuración de la API
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api'
+const API_URL = process.env.NEXT_PUBLIC_API_URL 
 
 interface TasacionResult {
   estimado_min: number;
@@ -60,10 +60,10 @@ export default function Home() {
         superficie: parseFloat(formData.superficie)
       }
 
-      console.log('Enviando solicitud a:', `${API_URL}/tasar`)
+      console.log('Enviando solicitud a:', `/api/tasar`)
       console.log('Datos a enviar:', dataToSend)
 
-      const response = await fetch(`${API_URL}/tasar`, {
+      const response = await fetch(`/api/tasar`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -73,9 +73,14 @@ export default function Home() {
       })
 
       if (!response.ok) {
-        const errorData = await response.json()
-        console.error('Error response:', errorData)
-        throw new Error(errorData.detail || 'Error al procesar la solicitud')
+        const errorText = await response.text()
+        console.error('Error response:', errorText)
+        try {
+          const errorData = JSON.parse(errorText)
+          throw new Error(errorData.error || 'Error al procesar la solicitud')
+        } catch (e) {
+          throw new Error(`Error ${response.status}: ${errorText}`)
+        }
       }
 
       const data = await response.json()
